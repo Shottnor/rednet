@@ -1,8 +1,6 @@
 local networkname = "tanktest"
 
-
-
-rednet.open("right")
+rednet.open(peripheral.find("modem"))
 rednet.host(networkname, "host")
 
 function UpdateUi(ids)
@@ -21,9 +19,7 @@ function UpdateUi(ids)
 
          end
 
-
     end
-
 end
 
 
@@ -37,7 +33,7 @@ while true do
 UpdateUi(ids)
 
 
-
+sleep(1) -- Slow done for better Performance
 end
 
 
